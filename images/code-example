@@ -1,0 +1,7 @@
+LOWER     = "abcdefghijklmnopqrstuvwxyz"
+UPPER     = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+NUMERALS  = 1234567890
+SIMILAR   = "oO08 iIlL1 g9qCGQ 8%& <([{}])> .,;: ~-_="
+UMLAUTS   = "Ä ä Ö ö Ü ü"
+SPECIAL   = "ß â é ù ï ø ç Ã Ē Æ œ"
+LIGATURES = "|| && -- <= == === >= =>"
