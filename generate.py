@@ -57,7 +57,7 @@ for g in font.glyphs():
             g.width = target_width
 
 font.familyname = 'Komisch Mono'
-font.version = '1.0.0'
+font.version = '1.1.0'
 font.comment = 'https://github.com/marcelhas/komisch-mono-font'
 font.copyright = 'https://github.com/marcelhas/komisch-mono-font/blob/master/LICENSE'
 

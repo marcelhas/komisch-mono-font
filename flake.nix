@@ -38,7 +38,7 @@
       in {
         packages.komisch-mono = pkgs.stdenv.mkDerivation {
           pname = "Komisch Mono";
-          version = "1.0.0";
+          version = "1.1.0";
           src = ./.;
 
           nativeBuildInputs = with pkgs; [
