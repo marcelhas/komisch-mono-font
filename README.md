@@ -1,7 +1,7 @@
 # Komisch Mono
 
 [Comic Mono](https://github.com/dtinth/comic-mono-font) fork using
-[Comic Shanns v2](https://github.com/shannpersand/comic-shanns) as base with 
+[Comic Shanns v2](https://github.com/shannpersand/comic-shanns) as base with
 [ligatures](https://github.com/ToxicFrog/Ligaturizer), umlauts, diacritics and most [Nerdfont symbols](https://github.com/ryanoasis/nerd-fonts/).
 
 The font family is called `Komisch Mono`.
