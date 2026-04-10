@@ -30,13 +30,13 @@
 
         # Nerdfont Font Patcher.
         nf = pkgs.fetchzip {
-          url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.0/FontPatcher.zip";
-          sha256 = "sha256-/poejiOvaG3/SufXuUbVuAVEHUXz2E22jZPGv7jH1TI=";
+          url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FontPatcher.zip";
+          sha256 = "koZj0Tn1HtvvSbQGTc3RbXQdUU4qJwgClOVq1RXW6aM=";
           stripRoot = false;
         };
 
       in {
-        packages.komisch-mono = pkgs.stdenv.mkDerivation rec {
+        packages.komisch-mono = pkgs.stdenv.mkDerivation {
           pname = "Komisch Mono";
           version = "1.0.0";
           src = ./.;
