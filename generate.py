@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Generates the Comic Mono font files based on Comic Shanns font.
+Generates the Komisch Mono font files based on Comic Shanns font.
 
 Required files:
 - vendor/comic-shanns.otf
@@ -13,7 +13,6 @@ Based on:
 """
 
 import os
-import re
 import sys
 
 import fontforge
