@@ -43,7 +43,7 @@ def adjust_height(source, template, scale):
         setattr(source, attr, getattr(template, attr))
     source.transform(psMat.scale(scale))
 
-font = fontforge.open('vendor/comic-shanns.otf')
+font = fontforge.open('vendor/comic-shanns.ttf')
 ref = fontforge.open('vendor/Cousine-Regular.ttf')
 for g in font.glyphs():
     uni = g.unicode

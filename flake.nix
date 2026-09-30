@@ -8,13 +8,13 @@
         pkgs = nixpkgs.legacyPackages.${system};
 
         cousine-font = pkgs.fetchurl {
-          url = "https://github.com/google/fonts/raw/main/apache/cousine/Cousine-Regular.ttf";
-          sha256 = "sha256-aeHqWet3ABQgTlF0+AV1D5p5PbSiUx5lFrMLdGDUcLM=";
+          url = "https://github.com/google/fonts/raw/ab75f7cf3e87c9ba8663f431f2ee4279c6406ee3/ofl/cousine/Cousine-Regular.ttf";
+          sha256 = "sha256-HaIiUGdfxMQvzzqXNsRLwFcFFhBTMUQ7Zj/Vz70UEv4=";
         };
 
         comic-shans-font = pkgs.fetchurl {
-          url = "https://github.com/shannpersand/comic-shanns/raw/master/v2/comic%20shanns.otf";
-          sha256 = "sha256-ogAILIIBbTnwUYzUSdX6VIbbSo7kuXihDUOZpVo1fVQ=";
+          url = "https://github.com/shannpersand/comic-shanns/raw/b98eee0894464de98754d6c89ffdfb8c29ce9e45/v2/comic%20shanns%202.ttf";
+          sha256 = "sha256-ZFkLeUyrdBk3iJ03myBa4SbKTz7Vy+TxmDnSv6wkbaY=";
         };
 
         # Ligaturizer.
@@ -50,7 +50,7 @@
             mkdir -p vendor output
 
             ln -sf "${cousine-font}" vendor/Cousine-Regular.ttf
-            ln -sf "${comic-shans-font}" vendor/comic-shanns.otf
+            ln -sf "${comic-shans-font}" vendor/comic-shanns.ttf
 
             TMP=$(mktemp -d)
             python generate.py "$TMP"
