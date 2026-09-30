@@ -30,8 +30,8 @@
 
         # Nerdfont Font Patcher.
         nf = pkgs.fetchzip {
-          url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FontPatcher.zip";
-          sha256 = "koZj0Tn1HtvvSbQGTc3RbXQdUU4qJwgClOVq1RXW6aM=";
+          url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/FontPatcher.zip";
+          sha256 = "sha256-gZ41oZPnsVLcchA58eJ1Vl28ccqePpOZd/ZCEKYywX4=";
           stripRoot = false;
         };
 
