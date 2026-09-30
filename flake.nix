@@ -72,7 +72,6 @@
             patchNF "$TMP/komisch-mono-regular.ttf" "otf"
             patchNF "$TMP/komisch-mono-bold.ttf" "otf"
 
-            # Ligaturize.
             ligaturize() {
               local file_name="$1"
 
@@ -80,15 +79,19 @@
                 --output-dir="$pwd/output"  \
                 --prefix=""
             }
-            pwd=$(pwd)
-            pushd ${lig} || exit
+
+            # Hack: Ligaturizer reads ligatures.py from its own directory, so
+            # overwrite it using our own ligatures.py.
+            cp -r --no-preserve=mode ${lig} "$TMP/ligaturizer"
+            cp ${./ligatures.py} "$TMP/ligaturizer/ligatures.py"
+            pushd "$TMP/ligaturizer" || exit 1
             # TTF.
             ligaturize "$TMP/KomischMono-Regular.ttf"
             ligaturize "$TMP/KomischMono-Bold.ttf"
             # OTF.
             ligaturize "$TMP/KomischMono-Regular.otf"
             ligaturize "$TMP/KomischMono-Bold.otf"
-            popd || exit
+            popd || exit 1
           '';
 
           installPhase = ''
