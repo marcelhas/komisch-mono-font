@@ -14,10 +14,10 @@ Based on:
 
 import os
 import sys
+import unicodedata
 
 import fontforge
 import psMat
-import unicodedata
 
 OUTDIR = sys.argv[1]
 
@@ -52,8 +52,8 @@ for g in font.glyphs():
         target_width = 510
         if g.width != target_width:
             delta = target_width - g.width
-            g.left_side_bearing = int(round(g.left_side_bearing + delta / 2.0))
-            g.right_side_bearing = int(round(g.right_side_bearing + delta - g.left_side_bearing))
+            g.left_side_bearing = round(g.left_side_bearing + delta / 2.0)
+            g.right_side_bearing = round(g.right_side_bearing + delta - g.left_side_bearing)
             g.width = target_width
 
 font.familyname = 'Komisch Mono'
