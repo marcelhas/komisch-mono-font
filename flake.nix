@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
   };
 
   outputs = { self, nixpkgs, flake-utils }:
@@ -42,8 +42,8 @@
           src = ./.;
 
           nativeBuildInputs = with pkgs; [
-            python311
-            fontforge
+            python314
+            python314Packages.fontforge
           ];
 
           buildPhase = ''
