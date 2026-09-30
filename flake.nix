@@ -82,6 +82,7 @@
 
             # Hack: Ligaturizer reads ligatures.py from its own directory, so
             # overwrite it using our own ligatures.py.
+            pwd="$(pwd)"
             cp -r --no-preserve=mode ${lig} "$TMP/ligaturizer"
             cp ${./ligatures.py} "$TMP/ligaturizer/ligatures.py"
             pushd "$TMP/ligaturizer" || exit 1
